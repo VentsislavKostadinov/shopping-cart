@@ -1,0 +1,19 @@
+@import "./global//variables";
+@import "./global/fonts";
+
+.bannerWrapper {
+  padding-left: 3rem;
+    .banner {
+        width: 480px;
+        font-weight: 600;
+
+        h2 {
+            font-size: 4rem;
+        }
+    }
+
+    span {
+        color: $deep-orange;
+        font-family: Poppins-Regular, serif;
+    }
+}

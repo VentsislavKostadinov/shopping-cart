@@ -1,0 +1,51 @@
+@import "./global//variables";
+@import "./global/fonts";
+
+nav {
+  ul {
+    display: flex;
+    list-style: none;
+
+    li:first-child {
+      margin-right: auto;
+    }
+
+    li {
+
+      a {
+        margin-top: 3rem;
+        display: block;
+        padding: 0 1.7rem;
+        text-decoration: none;
+        color: $dark-smoke-color;
+        font-size: 0.9rem;
+        font-weight: 600;
+        font-size: Poppins-Bold, 'serif';
+
+        span {
+          margin-right: 1rem;
+        }
+      }
+
+      .logo {
+        font-weight: 700;
+        font-size: 2rem;
+        color: $dark-color;
+      }
+
+      .imgFluid {
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+        margin-right: -28px;
+      }
+
+      .deliveryNav {
+        background-color: $light-orange;
+        color: $deep-orange;
+        border-radius: 50px;
+      }
+    }
+  }
+
+}
