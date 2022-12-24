@@ -1,7 +1,6 @@
-import styles from "./style/Banner.module.scss";
+import styles from "../style/Banner.module.scss";
 
 const Banner = () => {
-
     return (
         <div className={styles.bannerWrapper}>
             <div className={styles.banner}>

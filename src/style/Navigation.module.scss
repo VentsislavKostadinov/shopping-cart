@@ -4,6 +4,8 @@
 nav {
   ul {
     display: flex;
+    flex-wrap: wrap;
+    flex: 1 0 0%;
     list-style: none;
 
     li:first-child {
@@ -48,4 +50,12 @@ nav {
     }
   }
 
+}
+
+@media (max-width: 768px) {
+  nav {
+    li:not(:first-child) {
+      margin-left: auto;
+    }
+  }
 }

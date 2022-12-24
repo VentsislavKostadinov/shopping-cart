@@ -1,6 +1,6 @@
-import styles from "./style/App.module.scss";
-import Navigation from "./Navigation";
-import Banner from "./Banner";
+import styles from "../src/style/App.module.scss";
+import Navigation from "../src/components/Navigation";
+import Banner from "../src/components/Banner";
 
 function App() {
   return (

@@ -1,5 +1,5 @@
-import styles from "./style/Navigation.module.scss";
-import freeDeliveryImage from "./assets/images/free-delivery.png";
+import styles from "../style/Navigation.module.scss";
+import freeDeliveryImage from "../assets/images/free-delivery.png";
 const Navigation = () => {
 
     return (

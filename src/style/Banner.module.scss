@@ -2,7 +2,8 @@
 @import "./global/fonts";
 
 .bannerWrapper {
-  padding-left: 3rem;
+    padding-left: 3rem;
+
     .banner {
         width: 480px;
         font-weight: 600;
@@ -16,4 +17,17 @@
         color: $deep-orange;
         font-family: Poppins-Regular, serif;
     }
+}
+
+@media (max-width: 769px) {
+    .bannerWrapper {
+        .banner {
+            width: 100%;
+
+            h2 {
+                font-size: 2.5rem;
+            }
+        }
+    }
+
 }
