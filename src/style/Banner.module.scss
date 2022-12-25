@@ -3,29 +3,45 @@
 
 .bannerWrapper {
     padding-left: 3rem;
-
-    .banner {
+    .bannerTitle {
         width: 480px;
         font-weight: 600;
-
         h2 {
             font-size: 4rem;
+        }
+
+        .bannerSubtitle {
+            font-family: Poppins-Regular, serif;
+            font-weight: normal;
+            width: 620px;
+
+            h5 {
+                font-size: 1rem;
+            }
         }
     }
 
     span {
         color: $deep-orange;
-        font-family: Poppins-Regular, serif;
     }
 }
 
 @media (max-width: 769px) {
     .bannerWrapper {
-        .banner {
-            width: 100%;
+        margin-top: 4rem;
+        text-align: center;
+        padding-left: 0;
+
+        .bannerTitle {
+            margin: auto;
+            width: 95%;
 
             h2 {
                 font-size: 2.5rem;
+            }
+
+            .bannerSubtitle {
+                width: 100%;
             }
         }
     }
