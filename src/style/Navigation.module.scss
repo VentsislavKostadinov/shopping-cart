@@ -7,9 +7,16 @@ nav {
     flex-wrap: wrap;
     flex: 1 0 0%;
     list-style: none;
+    padding: 0;
+
 
     li:first-child {
       margin-right: auto;
+
+      a {
+        padding: 0;
+      }
+
     }
 
     li {
