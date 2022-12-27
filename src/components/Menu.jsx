@@ -1,6 +1,16 @@
 import data from "../data/data.json";
 import styles from "../style/Menu.module.scss";
+import { useState, useEffect } from "react";
 const Menu = () => {
+
+  const [orderValues, setOrderValues] = useState([]);
+
+  const handleClick = (selectedElement) => {
+    setOrderValues([...orderValues, selectedElement])
+  }
+
+  useEffect(() => {
+  }, [orderValues]);
 
   return (
     <div className={styles.menuWrap}>
@@ -14,7 +24,7 @@ const Menu = () => {
                 <h6 className={styles.title}>{name}</h6>
                 <p>{caption}</p>
                 <h6><span>$</span>{price}</h6>
-                <img className={styles.shoppingBasket} src={shoppingBasket} alt="shopping-basket" />
+                <img onClick={() => handleClick(element)} className={styles.shoppingBasket} src={shoppingBasket} alt="shopping-basket" />
               </article>
             </div>
           )
