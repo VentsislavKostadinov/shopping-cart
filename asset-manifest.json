@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.b6ae4931.css",
-    "main.js": "/shopping-cart/static/js/main.2427e79d.js",
+    "main.css": "/shopping-cart/static/css/main.b351b617.css",
+    "main.js": "/shopping-cart/static/js/main.c77f7edd.js",
     "static/js/787.d6fe38e8.chunk.js": "/shopping-cart/static/js/787.d6fe38e8.chunk.js",
     "static/media/Poppins-Regular.ttf": "/shopping-cart/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
     "static/media/Poppins-Bold.ttf": "/shopping-cart/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
     "index.html": "/shopping-cart/index.html",
-    "main.b6ae4931.css.map": "/shopping-cart/static/css/main.b6ae4931.css.map",
-    "main.2427e79d.js.map": "/shopping-cart/static/js/main.2427e79d.js.map",
+    "main.b351b617.css.map": "/shopping-cart/static/css/main.b351b617.css.map",
+    "main.c77f7edd.js.map": "/shopping-cart/static/js/main.c77f7edd.js.map",
     "787.d6fe38e8.chunk.js.map": "/shopping-cart/static/js/787.d6fe38e8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b6ae4931.css",
-    "static/js/main.2427e79d.js"
+    "static/css/main.b351b617.css",
+    "static/js/main.c77f7edd.js"
   ]
 }
