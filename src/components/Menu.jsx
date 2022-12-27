@@ -2,23 +2,26 @@ import data from "../data/data.json";
 import styles from "../style/Menu.module.scss";
 const Menu = () => {
 
-    return (
-        <div className={styles.menuWrap}>
-          {
-            data?.items?.map((el, index) => {
-
-               return (
-                <div className={styles.cards}>
-                <img src={el.image} alt="img" />
-                <h6 className={styles.title}>{el.name}</h6>
-                <p>{el.caption}</p>
-                <h6><span>$</span>{el.price}</h6>
-              </div>
-               )
-            })
-          }
-        </div>
-    )
+  return (
+    <div className={styles.menuWrap}>
+      {
+        data?.items?.map((element, index) => {
+          const { image, name, caption, price, shoppingBasket } = element;
+          return (
+            <div className={styles.cards} key={index}>
+              <img className={styles.menuImage} src={image} alt="img" />
+              <article>
+                <h6 className={styles.title}>{name}</h6>
+                <p>{caption}</p>
+                <h6><span>$</span>{price}</h6>
+                <img className={styles.shoppingBasket} src={shoppingBasket} alt="shopping-basket" />
+              </article>
+            </div>
+          )
+        })
+      }
+    </div>
+  )
 }
 
 export default Menu;

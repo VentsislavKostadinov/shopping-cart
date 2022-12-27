@@ -4,43 +4,50 @@
       "name": "Butter Pancakes",
       "caption": "With",
       "price": 14.5,
-      "image": "https://res.cloudinary.com/delpbjxvv/image/upload/v1672126568/dreamshot/1.png"
+      "image": "https://res.cloudinary.com/delpbjxvv/image/upload/v1672126568/dreamshot/1.png",
+      "shoppingBasket": "https://res.cloudinary.com/delpbjxvv/image/upload/v1672137495/dreamshot/shopping-basket.png"
     },
     {
       "name": "Avocado Toast",
       "caption": "2 pieces",
       "price": 16.5,
-      "image": "https://res.cloudinary.com/delpbjxvv/image/upload/v1672126569/dreamshot/2.png"
+      "image": "https://res.cloudinary.com/delpbjxvv/image/upload/v1672126569/dreamshot/2.png",
+      "shoppingBasket": "https://res.cloudinary.com/delpbjxvv/image/upload/v1672137495/dreamshot/shopping-basket.png"
     },
     {
       "name": "Sweet Yogurt",
       "caption": "With strawberries",
       "price": 5.0,
-      "image": "https://res.cloudinary.com/delpbjxvv/image/upload/v1672126568/dreamshot/3.png"
+      "image": "https://res.cloudinary.com/delpbjxvv/image/upload/v1672126568/dreamshot/3.png",
+      "shoppingBasket": "https://res.cloudinary.com/delpbjxvv/image/upload/v1672137495/dreamshot/shopping-basket.png"
     },
     {
       "name": "Peanut Toast",
       "caption": "With butter",
       "price": 9.5,
-      "image": "https://res.cloudinary.com/delpbjxvv/image/upload/v1672126568/dreamshot/4.png"
+      "image": "https://res.cloudinary.com/delpbjxvv/image/upload/v1672126568/dreamshot/4.png",
+      "shoppingBasket": "https://res.cloudinary.com/delpbjxvv/image/upload/v1672137495/dreamshot/shopping-basket.png"
     },
     {
       "name": "French Toast",
       "caption": "With butter and jam",
       "price": 9.5,
-      "image": "https://res.cloudinary.com/delpbjxvv/image/upload/v1672126568/dreamshot/5.png"
+      "image": "https://res.cloudinary.com/delpbjxvv/image/upload/v1672126568/dreamshot/5.png",
+      "shoppingBasket": "https://res.cloudinary.com/delpbjxvv/image/upload/v1672137495/dreamshot/shopping-basket.png"
     },
     {
       "name": "Banana Bread",
       "caption": "With blueberries",
       "price": 5.5,
-      "image": "https://res.cloudinary.com/delpbjxvv/image/upload/v1672126568/dreamshot/6.png"
+      "image": "https://res.cloudinary.com/delpbjxvv/image/upload/v1672126568/dreamshot/6.png",
+      "shoppingBasket": "https://res.cloudinary.com/delpbjxvv/image/upload/v1672137495/dreamshot/shopping-basket.png"
     },
     {
       "name": "Classic Waffle",
       "caption": "With ice cream",
       "price": 7.5,
-      "image": "https://res.cloudinary.com/delpbjxvv/image/upload/v1672126568/dreamshot/7.png"
+      "image": "https://res.cloudinary.com/delpbjxvv/image/upload/v1672126568/dreamshot/7.png",
+      "shoppingBasket": "https://res.cloudinary.com/delpbjxvv/image/upload/v1672137495/dreamshot/shopping-basket.png"
     }
   ]
 }
