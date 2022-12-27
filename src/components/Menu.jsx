@@ -4,12 +4,22 @@ import { useState, useEffect } from "react";
 const Menu = () => {
 
   const [orderValues, setOrderValues] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const handleClick = (selectedElement) => {
-    setOrderValues([...orderValues, selectedElement])
-  }
+    setOrderValues([...orderValues, selectedElement]);
+  };
+
+  const calculateTotalSum = () => {
+    let sum = 0;
+    orderValues.map(element => {
+      sum += element.price;
+      return setTotalPrice(sum);
+    });
+  };
 
   useEffect(() => {
+    calculateTotalSum();
   }, [orderValues]);
 
   return (
@@ -30,6 +40,7 @@ const Menu = () => {
           )
         })
       }
+      <h3 style={{ color: "black" }}><span>$</span>{totalPrice}</h3>
     </div>
   )
 }
