@@ -1,0 +1,30 @@
+@import "./global//variables";
+@import "./global/fonts";
+
+.menuWrap {
+    display: flex;
+
+    .cards {
+        border-radius: 20px;
+        margin: 1rem;
+        background-color: lightgray;
+        text-align: center;
+
+        img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .title {
+            margin-top: 2rem;
+        }
+
+        h6 > span {
+            color: $deep-orange;
+        }
+
+        p {
+            font-family: Poppins-Regular, serif !important;
+        }
+    }
+}
