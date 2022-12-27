@@ -1,6 +1,7 @@
 import data from "../data/data.json";
 import styles from "../style/Menu.module.scss";
 import { useState, useEffect } from "react";
+import Basket from "./Basket";
 const Menu = () => {
 
   const [orderValues, setOrderValues] = useState([]);
@@ -26,7 +27,7 @@ const Menu = () => {
     <div className={styles.menuWrap}>
       {
         data?.items?.map((element, index) => {
-          const { image, name, caption, price, shoppingBasket } = element;
+          const { image, name, caption, price } = element;
           return (
             <div className={styles.cards} key={index}>
               <img className={styles.menuImage} src={image} alt="img" />
@@ -34,7 +35,9 @@ const Menu = () => {
                 <h6 className={styles.title}>{name}</h6>
                 <p>{caption}</p>
                 <h6><span>$</span>{price}</h6>
-                <img onClick={() => handleClick(element)} className={styles.shoppingBasket} src={shoppingBasket} alt="shopping-basket" />
+                <p className={styles.shoppingBasket} onClick={() => handleClick(element)}>
+                  <Basket />
+                </p>
               </article>
             </div>
           )
