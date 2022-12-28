@@ -10,29 +10,33 @@ const Menu = () => {
   const [orderValues, setOrderValues] = useState([]);
   const [totalSum, setTotalSum] = useState(0.00);
   const [toggleShow, setToggleShow] = useState(false);
+  const [submitOrder, setSubmitOrder] = useState(false);
   const myRef = useRef();
 
   const handleSelectItem = (selectedElement) => {
     setOrderValues([...orderValues, selectedElement]);
   };
 
-  const handleClickOutside = e => {
+  const handleClickOutsidePage = e => {
     if (!myRef.current.contains(e.target)) {
       setToggleShow(false);
     }
   };
-  const handleClickInside = () => setToggleShow(true);
+  const handleClickInsidePage = () => {
+    setToggleShow(true);
+    setSubmitOrder(false);
+  }
 
   const handleHidePopUpOnEscapeBtn = (e) => {
     if (e.key === "Escape") setToggleShow(false);
   }
 
   useEffect(() => {
-    document.addEventListener("click", handleClickOutside);
+    document.addEventListener("click", handleClickOutsidePage);
     document.addEventListener("keydown", handleHidePopUpOnEscapeBtn);
 
     return () => {
-      document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener("click", handleClickOutsidePage);
       document.removeEventListener("keydown", handleHidePopUpOnEscapeBtn);
     }
   });
@@ -49,6 +53,13 @@ const Menu = () => {
   useEffect(() => {
     calculateTotalSum();
   }, [orderValues]);
+
+  const handleOrderBtn = () => {
+    setOrderValues([]);
+    setTotalSum(0.00);
+    handleClickInsidePage();
+    setSubmitOrder(true);
+  }
 
   return (
     <div className={styles.menu}>
@@ -72,14 +83,14 @@ const Menu = () => {
           })
         }
       </div>
-      <div className={styles.footerWrap}>
-        <div className={styles.shoppingBasketFooter} ref={myRef} onClick={handleClickInside}>
+      <div className={styles.footerWrap} ref={myRef}>
+        <div className={styles.shoppingBasketFooter} onClick={handleClickInsidePage}>
           <Basket />
         </div>
         <TotalSum totalSum={totalSum} />
-        <OrderButton />
+        <OrderButton handleOrderBtn={handleOrderBtn} />
       </div>
-      <PopUpItems toggleShow={toggleShow} items={orderValues} totalSum={totalSum} />
+      <PopUpItems toggleShow={toggleShow} submitOrder={submitOrder} items={orderValues} totalSum={totalSum} />
     </div>
   )
 }
