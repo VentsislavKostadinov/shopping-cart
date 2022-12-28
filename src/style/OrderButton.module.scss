@@ -1,0 +1,10 @@
+@import "./global//variables";
+@import "./global/fonts";
+
+.orderButton {
+    background-color: $deep-orange;
+    border: 1px solid $deep-orange;
+    color: $white-color;
+    border-radius: 15px;
+    width: 35%;
+}

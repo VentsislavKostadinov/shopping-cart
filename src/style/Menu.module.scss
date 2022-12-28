@@ -1,51 +1,70 @@
 @import "./global//variables";
 @import "./global/fonts";
+@import "./global/mixins";
 
-.menuWrap {
-    overflow: auto;
-    white-space: nowrap;
+.menu {
+    .menuWrap {
+        overflow: auto;
+        white-space: nowrap;
 
-    .cards {
-        border-radius: 20px;
-        margin: 2rem;
-        background-color: #F9F6F6;
-        text-align: center;
-        display: inline-block;
-        position: relative;
-        width: 230px;
-        height: 270px;
+        .cards {
+            border-radius: 20px;
+            margin: 2rem;
+            background-color: $light-gray;
+            text-align: center;
+            display: inline-block;
+            position: relative;
+            width: 230px;
+            height: 270px;
 
-        .menuImage {
-            width: 192px;
-            height: 120px;
-            position: absolute;
-            left: 30%;
+            .menuImage {
+                width: 192px;
+                height: 120px;
+                position: absolute;
+                left: 30%;
+            }
+
+            article {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 100%;
+            }
+
+            h6 > span {
+                color: $deep-orange;
+            }
+
+            p {
+                font-family: Poppins-Regular, serif !important;
+            }
         }
 
-        .shoppingBasket {
-          padding: 0.5rem;
-          background-color: #ffff;
-          text-align: right;
-          float: right;
-          margin-right: 1rem;
-          border-radius: 5px;
-          margin-top: -1rem;
-          cursor: pointer;
-        }
+    }
 
-        article {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            width: 100%;
-        }
+    .shoppingBasketMenu {
+        @include basket;
+        padding: 0.5rem;
+        background-color: $white-color;
+        margin-top: -1rem;
+    }
 
-        h6 > span {
-            color: $deep-orange;
-        }
+    .shoppingBasketFooter > img {
+       // @include basket;
+       height: 25px;
+       cursor: pointer;
+       
+    }
 
-        p {
-            font-family: Poppins-Regular, serif !important;
-        }
+
+    .footerWrap {
+        display: flex;
+        justify-content: space-around;
+        padding: 1rem;
+        margin: 2rem auto;
+        width: 480px;
+        background-color: $light-gray;
+        border-radius: 15px;
+
     }
 }
