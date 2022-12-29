@@ -17,3 +17,11 @@
     background-color: rgba(255, 255, 255, 0.84);
     backdrop-filter: blur(2px);
 }
+
+@mixin orangeButton($width) {
+    background-color: $deep-orange;
+    border: 1px solid $deep-orange;
+    color: $white-color;
+    border-radius: 15px;
+    width: $width;
+}

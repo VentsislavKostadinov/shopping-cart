@@ -1,0 +1,10 @@
+.footerElement {
+    max-width: 480px;
+    margin: auto;
+}
+
+@media (max-width: 420px) {
+    .footerElement {
+        max-width: 310px !important;
+    }
+}

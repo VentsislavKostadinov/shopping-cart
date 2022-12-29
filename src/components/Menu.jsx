@@ -6,6 +6,7 @@ import TotalSum from "./TotalSum";
 import OrderButton from "./OrderButton";
 import PopUpItems from "./PopUpItems";
 import { storeItemsInLocalStorage, clearLocalStorage, calculateTotalSum } from "../utils/utils";
+import Footer from "./Footer";
 
 const Menu = () => {
   const orderValuesLocalstorage = JSON.parse(localStorage.getItem("orderValues"));
@@ -76,13 +77,15 @@ const Menu = () => {
           })
         }
       </div>
-      <div className={styles.footerWrap} ref={myRef}>
-        <div className={styles.shoppingBasketFooter} onClick={handleClickInsidePage}>
-          <Basket />
+      <Footer>
+        <div className={styles.footerWrap} ref={myRef}>
+          <div className={styles.shoppingBasketFooter} onClick={handleClickInsidePage}>
+            <Basket />
+          </div>
+          <TotalSum totalSum={totalSum} />
+          <OrderButton handleOrderBtn={handleOrderBtn} />
         </div>
-        <TotalSum totalSum={totalSum} />
-        <OrderButton handleOrderBtn={handleOrderBtn} />
-      </div>
+      </Footer>
       <PopUpItems toggleShow={toggleShow} submitOrder={submitOrder} items={orderValues} totalSum={totalSum} />
     </div>
   )

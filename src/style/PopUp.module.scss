@@ -9,13 +9,15 @@
     .popUpItemsPartialOpacity {
         @include popUpItems(85%)
     }
-
-
+    
+    .popUpItemsWrap {
+      max-width: 480px;
+      margin: auto;
+    
     .popUpItemsContent {
         background-color: $light-gray;
-        margin: 10% auto;
+        margin-top: 15rem;
         padding: 20px;
-        width: 480px;
         border-radius: 15px;
         text-align: center;
 
@@ -29,7 +31,7 @@
         }
 
     }
-
+}
     span {
         color: $deep-orange;
     }
@@ -46,11 +48,7 @@
         }
 
         button {
-            background-color: $deep-orange;
-            border: 1px solid $deep-orange;
-            width: 25%;
-            border-radius: 15px;
-            color: $white-color;
+            @include orangeButton(25%);
             font-size: 1.3rem;
             padding: 0.3rem;
             margin-top: 2rem;
@@ -62,5 +60,11 @@
 
     .popUpItems {
         padding-top: 14rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .popUpItemsWrap {
+        max-width: 310px !important;
     }
 }
