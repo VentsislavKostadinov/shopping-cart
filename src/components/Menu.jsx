@@ -5,23 +5,23 @@ import Basket from "./Basket";
 import TotalSum from "./TotalSum";
 import OrderButton from "./OrderButton";
 import PopUpItems from "./PopUpItems";
+import { storeItemsInLocalStorage, clearLocalStorage, calculateTotalSum } from "../utils/utils";
 
 const Menu = () => {
-  const [orderValues, setOrderValues] = useState([]);
-  const [totalSum, setTotalSum] = useState(0.00);
+  const orderValuesLocalstorage = JSON.parse(localStorage.getItem("orderValues"));
+  const [orderValues, setOrderValues] = useState(orderValuesLocalstorage === null ? [] : orderValuesLocalstorage);
+  const [totalSum, setTotalSum] = useState(0);
   const [toggleShow, setToggleShow] = useState(false);
   const [submitOrder, setSubmitOrder] = useState(false);
   const myRef = useRef();
 
   const handleSelectItem = (selectedElement) => {
     setOrderValues([...orderValues, selectedElement]);
-  };
+  }
 
   const handleClickOutsidePage = e => {
-    if (!myRef.current.contains(e.target)) {
-      setToggleShow(false);
-    }
-  };
+    if (!myRef.current.contains(e.target)) setToggleShow(false);
+  }
   const handleClickInsidePage = () => {
     setToggleShow(true);
     setSubmitOrder(false);
@@ -41,24 +41,17 @@ const Menu = () => {
     }
   });
 
-
-  const calculateTotalSum = () => {
-    let sum = 0;
-    orderValues.map(element => {
-      sum += element.price;
-      return setTotalSum(sum);
-    });
-  };
-
   useEffect(() => {
-    calculateTotalSum();
+    calculateTotalSum(orderValues, setTotalSum);
+    storeItemsInLocalStorage(orderValues);
   }, [orderValues]);
 
   const handleOrderBtn = () => {
     setOrderValues([]);
-    setTotalSum(0.00);
+    setTotalSum(0);
     handleClickInsidePage();
     setSubmitOrder(true);
+    clearLocalStorage();
   }
 
   return (

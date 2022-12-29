@@ -6,7 +6,7 @@ const PopUpItems = (props) => {
         <>
             {
                 props.toggleShow ? (
-                    <div className={styles.popUpItems}>
+                    <div className={props.submitOrder ? styles.popUpItemsFullOpacity : styles.popUpItemsPartialOpacity}>
                         <div className={styles.popUpItemsContent}>
                             {
                                 props.items.length !== 0 && !props.submitOrder && (
@@ -22,11 +22,17 @@ const PopUpItems = (props) => {
                             }
 
                             {
-                                 props.items.length === 0 && !props.submitOrder && <h4>You basket is empty</h4>
+                                props.items.length === 0 && !props.submitOrder && <h4>You basket is empty</h4>
                             }
 
                             {
-                              props.items.length === 0 && props.submitOrder && <div>Order Submit</div>   
+                                props.items.length === 0 && props.submitOrder && (
+                                    <div className={styles.successfulOrder}>
+                                        <h3>Congratulations!</h3>
+                                        <p>Your order it's on its way.</p>
+                                        <button>Ok</button>
+                                    </div>
+                                )
                             }
 
                             {
