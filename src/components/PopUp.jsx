@@ -3,8 +3,9 @@ import ReviewList from "./ReviewList";
 import EmptyBasket from "./EmptyBasket";
 import PlaceOrder from "./PlaceOrder";
 import ReviewListTotalSum from "./ReviewListTotalSum";
+import propTypes from "prop-types";
 
-const PopUpItems = (props) => {
+const PopUp = (props) => {
 
     return (
         <>
@@ -35,7 +36,7 @@ const PopUpItems = (props) => {
                                 }
 
                                 {
-                                    props.items.length !== 0 && <ReviewListTotalSum totalSum={props.totalSum.toFixed(2)} />
+                                    props.items.length !== 0 && <ReviewListTotalSum totalSum={props.totalSum} />
                                 }
                             </div>
                         </div>
@@ -46,4 +47,11 @@ const PopUpItems = (props) => {
     )
 }
 
-export default PopUpItems;
+export default PopUp;
+
+PopUp.propTypes = {
+    toggleShow: propTypes.bool,
+    submitOrder: propTypes.bool,
+    items: propTypes.array,
+    totalSum: propTypes.number
+}

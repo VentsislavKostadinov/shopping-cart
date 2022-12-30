@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Basket from "./Basket";
 import TotalSum from "./TotalSum";
 import OrderButton from "./OrderButton";
-import PopUpItems from "./PopUpItems";
+import PopUp from "./PopUp";
 import { storeItemsInLocalStorage, clearLocalStorage, calculateTotalSum } from "../utils/utils";
 import Footer from "./Footer";
 
@@ -86,7 +86,7 @@ const MenuItems = () => {
           <OrderButton handleOrderBtn={handleOrderBtn} />
         </div>
       </Footer>
-      <PopUpItems toggleShow={toggleShow} submitOrder={submitOrder} items={orderValues} totalSum={totalSum} />
+      <PopUp toggleShow={toggleShow} submitOrder={submitOrder} items={orderValues} totalSum={totalSum} />
     </div>
   )
 }

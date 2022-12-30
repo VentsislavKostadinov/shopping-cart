@@ -1,4 +1,6 @@
 import styles from "../style/ReviewList.module.scss";
+import propTypes from "prop-types";
+
 const ReviewList = (props) => {
 
     return (
@@ -10,3 +12,8 @@ const ReviewList = (props) => {
 }
 
 export default ReviewList;
+
+ReviewList.propTypes = {
+    name: propTypes.string,
+    price: propTypes.number
+}
