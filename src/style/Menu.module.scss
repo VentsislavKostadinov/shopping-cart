@@ -31,7 +31,7 @@
                 width: 100%;
             }
 
-            h6 > span {
+            h6>span {
                 color: $deep-orange;
             }
 
@@ -49,18 +49,23 @@
         margin-top: -1rem;
     }
 
-    .shoppingBasketFooter > img {
-       height: 25px;
-       cursor: pointer;
-       
-    }
-        .footerWrap {
-            display: flex;
-            justify-content: space-around;
-            padding: 1rem;
-            margin: 2rem auto;
-            background-color: $light-gray;
-            border-radius: 15px;
-    
+    .shoppingBasketFooter {
+           margin-top: 1rem;
+        img {
+            height: 25px;
+            cursor: pointer;
         }
+
+
+    }
+
+    .footerWrap {
+        display: flex;
+        justify-content: space-around;
+        padding: 1rem;
+        margin: 2rem auto;
+        background-color: $light-gray;
+        border-radius: 15px;
+
+    }
 }

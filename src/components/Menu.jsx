@@ -65,9 +65,9 @@ const Menu = () => {
               <div className={styles.cards} key={index}>
                 <img className={styles.menuImage} src={image} alt="img" />
                 <article>
-                  <h6 className={styles.title}>{name}</h6>
+                  <h4 className={styles.title}>{name}</h4>
                   <p>{caption}</p>
-                  <h6><span>$</span>{price.toFixed(2)}</h6>
+                  <h4><span>$</span>{price.toFixed(2)}</h4>
                   <p className={styles.shoppingBasketMenu} onClick={() => handleSelectItem(element)}>
                     <Basket />
                   </p>

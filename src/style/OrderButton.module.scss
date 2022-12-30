@@ -4,6 +4,8 @@
 
 .orderButton {
     @include orangeButton(35%);
+    height: 54px;
+    font-size: 1.25rem;
 }
 
 @media (max-width: 420px) {
