@@ -1,14 +1,16 @@
 import styles from "../style/Navigation.module.scss";
 import freeDeliveryImage from "../assets/images/free-delivery.png";
+import dummy from "../dummy/dummy.json";
 const Navigation = () => {
+    const navigationTitles = dummy?.navigation;
 
     return (
         <nav>
             <ul>
-                <li><a href="/" className={styles.logo}>BRUNCHY</a></li>
-                <li><a href="/">About</a></li>
-                <li><a href="/">Call us</a></li>
-                <li ><a href="/#" className={styles.deliveryNav}><span>Free delivery</span> <img className={styles.imgFluid} src={freeDeliveryImage} alt="img" /></a></li>
+                <li><a href="/" className={styles.brandTitle}>{navigationTitles.brandTitle.toUpperCase()}</a></li>
+                <li><a href={navigationTitles.redirectUrl} target="_blank" rel="noreferrer">{navigationTitles.aboutTitle}</a></li>
+                <li><a href={navigationTitles.redirectUrl} target="_blank" rel="noreferrer">{navigationTitles.callUsTitle}</a></li>
+                <li ><a href="/" className={styles.deliveryNav}><span>{navigationTitles.freeDeliveryTitle}</span> <img className={styles.imgFluid} src={freeDeliveryImage} alt="img" /></a></li>
             </ul>
         </nav>
     )

@@ -1,0 +1,28 @@
+{
+    "navigation": {
+        "brandTitle": "brunchy",
+        "aboutTitle": "About",
+        "callUsTitle": "Call us",
+        "freeDeliveryTitle": "Free delivery",
+        "redirectUrl": "https://www.dreamshot.bg/"
+    },
+
+    "banner": {
+        "title": "The fastest brunch delivery in ",
+        "highlightEndTitle": "Your city",
+        "subTitle": "This is my Exploration for Fruit - Food Delivery Landing Page 🍕.",
+        "subTitleQuestion": "How about you?"
+    },
+
+    "popUpItems": {
+        "congratulationsTitle": "Congratulations!",
+        "orderTitle": "Your order it's on its way.",
+        "okMessage": "Ok",
+        "totalSumMessage": "Total:",
+        "dollarSign": "$"
+    },
+
+    "orderButton": {
+        "orderButtonTitle":  "Order now" 
+    }
+}

@@ -1,7 +1,9 @@
 import styles from "../style/PopUp.module.scss";
+import dummy from "../dummy/dummy.json";
 
 const PopUpItems = (props) => {
 
+    const popUpItemsTitles = dummy?.popUpItems;
     return (
         <>
             {
@@ -29,9 +31,9 @@ const PopUpItems = (props) => {
                                 {
                                     props.items.length === 0 && props.submitOrder && (
                                         <div className={styles.successfulOrder}>
-                                            <h3>Congratulations!</h3>
-                                            <p>Your order it's on its way.</p>
-                                            <button>Ok</button>
+                                            <h3>{popUpItemsTitles.congratulationsTitle}</h3>
+                                            <p>{popUpItemsTitles.orderTitle}</p>
+                                            <button>{popUpItemsTitles.okMessage}</button>
                                         </div>
                                     )
                                 }
@@ -41,8 +43,8 @@ const PopUpItems = (props) => {
                                         <>
                                             <hr />
                                             <div className={styles.popUpItemsfooter}>
-                                                <h4>Total:</h4>
-                                                <h4><span>$ </span>{props.totalSum.toFixed(2)}</h4>
+                                                <h4>{popUpItemsTitles.totalSumMessage}</h4>
+                                                <h4><span>{popUpItemsTitles.dollarSign} </span>{props.totalSum.toFixed(2)}</h4>
                                             </div>
                                         </>
                                     )

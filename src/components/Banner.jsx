@@ -1,10 +1,13 @@
 import styles from "../style/Banner.module.scss";
+import dummy from "../dummy/dummy.json";
 
 const Banner = () => {
+    const bannerTitles = dummy?.banner;
+
     return (
         <div className={styles.bannerWrapper}>
-            <h2>The fastest brunch delivery in <span>Your city</span></h2><br />
-            <h5>This is my Exploration for Fruit - Food Delivery Landing Page 🍕. <br /> How about you?</h5>
+            <h2>{bannerTitles.title} <span>{bannerTitles.highlightEndTitle}</span></h2><br />
+            <h5>{bannerTitles.subTitle} <br />{bannerTitles.subTitleQuestion}</h5>
         </div>
     )
 }
