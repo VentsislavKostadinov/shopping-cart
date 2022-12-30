@@ -22,6 +22,10 @@
         "dollarSign": "$"
     },
 
+    "emptyBasket": {
+      "emptyBasketText" : "Sorry, Your basket is empty"
+    },
+
     "orderButton": {
         "orderButtonTitle":  "Order now" 
     }

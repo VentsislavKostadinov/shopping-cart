@@ -21,50 +21,15 @@
         border-radius: 15px;
         text-align: center;
 
-        .popUpItemsContentSelected,
-        .popUpItemsfooter {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin-top: 2rem;
-            margin-bottom: 1.5rem;
-        }
-
     }
 }
     span {
         color: $deep-orange;
     }
 
-    .successfulOrder {
-        h3 {
-            color: $deep-orange;
-            margin-top: 3rem;
-        }
-
-        p {
-            color: $dark-smoke-color;
-            font-family: Poppins-Regular, serif !important;
-        }
-
-        button {
-            @include orangeButton(25%);
-            font-size: 1.3rem;
-            padding: 0.3rem;
-            margin-top: 2rem;
-            margin-bottom: 3rem;
-        }
-    }
-
 @media (max-width: 768px) {
 
     .popUpItems {
         padding-top: 14rem;
-    }
-}
-
-@media (max-width: 420px) {
-    .popUpItemsWrap {
-        max-width: 310px !important;
     }
 }

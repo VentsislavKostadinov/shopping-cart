@@ -1,9 +1,11 @@
 import styles from "../style/PopUp.module.scss";
-import dummy from "../dummy/dummy.json";
+import ReviewList from "./ReviewList";
+import EmptyBasket from "./EmptyBasket";
+import PlaceOrder from "./PlaceOrder";
+import ReviewListTotalSum from "./ReviewListTotalSum";
 
 const PopUpItems = (props) => {
 
-    const popUpItemsTitles = dummy?.popUpItems;
     return (
         <>
             {
@@ -15,9 +17,8 @@ const PopUpItems = (props) => {
                                     props.items.length !== 0 && !props.submitOrder && (
                                         props.items.map((item, index) => {
                                             return (
-                                                <div className={styles.popUpItemsContentSelected} key={index}>
-                                                    <h4>{item.name}</h4>
-                                                    <h4><span>$ </span>{item.price.toFixed(2)}</h4>
+                                                <div key={index}>
+                                                    <ReviewList name={item.name} price={item.price} />
                                                 </div>
                                             )
                                         })
@@ -25,29 +26,16 @@ const PopUpItems = (props) => {
                                 }
 
                                 {
-                                    props.items.length === 0 && !props.submitOrder && <h4>You basket is empty</h4>
+                                    props.items.length === 0 && !props.submitOrder && <EmptyBasket />
                                 }
 
                                 {
-                                    props.items.length === 0 && props.submitOrder && (
-                                        <div className={styles.successfulOrder}>
-                                            <h3>{popUpItemsTitles.congratulationsTitle}</h3>
-                                            <p>{popUpItemsTitles.orderTitle}</p>
-                                            <button>{popUpItemsTitles.okMessage}</button>
-                                        </div>
-                                    )
+                                    props.items.length === 0 && props.submitOrder && <PlaceOrder />
+
                                 }
 
                                 {
-                                    props.items.length !== 0 && (
-                                        <>
-                                            <hr />
-                                            <div className={styles.popUpItemsfooter}>
-                                                <h4>{popUpItemsTitles.totalSumMessage}</h4>
-                                                <h4><span>{popUpItemsTitles.dollarSign} </span>{props.totalSum.toFixed(2)}</h4>
-                                            </div>
-                                        </>
-                                    )
+                                    props.items.length !== 0 && <ReviewListTotalSum totalSum={props.totalSum.toFixed(2)} />
                                 }
                             </div>
                         </div>

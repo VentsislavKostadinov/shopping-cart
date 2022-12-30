@@ -8,7 +8,7 @@ import PopUpItems from "./PopUpItems";
 import { storeItemsInLocalStorage, clearLocalStorage, calculateTotalSum } from "../utils/utils";
 import Footer from "./Footer";
 
-const Menu = () => {
+const MenuItems = () => {
   const orderValuesLocalstorage = JSON.parse(localStorage.getItem("orderValues"));
   const [orderValues, setOrderValues] = useState(orderValuesLocalstorage === null ? [] : orderValuesLocalstorage);
   const [totalSum, setTotalSum] = useState(0);
@@ -56,8 +56,8 @@ const Menu = () => {
   }
 
   return (
-    <div className={styles.menu}>
-      <div className={styles.menuWrap}>
+    <div className={styles.menuItems}>
+      <div className={styles.menuitemsWrap}>
         {
           data?.items?.map((element, index) => {
             const { image, name, caption, price } = element;
@@ -91,4 +91,4 @@ const Menu = () => {
   )
 }
 
-export default Menu;
+export default MenuItems;

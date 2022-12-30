@@ -1,0 +1,23 @@
+@import "./global//variables";
+@import "./global/fonts";
+@import "./global/mixins";
+
+.placeOrder {
+    h3 {
+        color: $deep-orange;
+        margin-top: 3rem;
+    }
+
+    p {
+        color: $dark-smoke-color;
+        font-family: Poppins-Regular, serif !important;
+    }
+
+    button {
+        @include orangeButton(25%);
+        font-size: 1.3rem;
+        padding: 0.3rem;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    }
+}
