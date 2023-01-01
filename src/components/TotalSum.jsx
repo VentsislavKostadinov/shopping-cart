@@ -1,7 +1,7 @@
 import styles from "../style/TotalSum.module.scss";
 import propTypes from "prop-types";
 
-const TotalSum = (props) => { return <h2 className={styles.totalSumCounter}>${props.totalSum.toFixed(2)}</h2> }
+const TotalSum = (props) => { return <p className={styles.totalSumCounter}>{props.totalSum?.toFixed(2)}$</p> }
 export default TotalSum;
 
 TotalSum.propTypes = {

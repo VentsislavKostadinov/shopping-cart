@@ -18,13 +18,14 @@
     
     .popUpItemsContent {
         background-color: $light-gray;
-        margin-top: 10rem;
         padding: 20px;
         border-radius: 15px;
         text-align: center;
         overflow-y: auto;
         height: auto;
         max-height: 350px;
+        margin: auto;
+        width: 80%;
 
     }
 }
