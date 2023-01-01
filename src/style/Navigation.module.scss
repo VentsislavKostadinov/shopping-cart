@@ -78,3 +78,12 @@ nav {
     }
   }
 }
+
+@media (max-width: 490px) {
+  nav ul > li:first-child {
+    margin-left: 0;
+  }
+  nav ul > li:last-child {
+    margin-right: 1rem;
+  }
+}
