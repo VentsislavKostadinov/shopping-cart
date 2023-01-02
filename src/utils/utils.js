@@ -10,3 +10,13 @@ export const calculateTotalSum = (values, totalSum) => {
     })
 
 };
+
+export const addEventListeners = (e, func) => {
+    document.addEventListener(e, func);
+    document.addEventListener(e, func);
+}
+
+export const removeEventListeners = (e, func) => {
+    document.removeEventListener(e, func);
+    document.removeEventListener(e, func);
+}

@@ -11,6 +11,7 @@ import PlaceOrder from "../components/PlaceOrder";
 import ReviewList from "../components/ReviewList";
 import ReviewListTotalSum from "../components/ReviewListTotalSum";
 import TotalSum from "../components/TotalSum";
+import ErrorHandling from "../components/ErrorHandling";
 
 export default {
     title: "Components",
@@ -28,3 +29,4 @@ export const placeOrder = () => <PlaceOrder />;
 export const reviewList = () => <ReviewList />;
 export const reviewListTotalSum = () => <ReviewListTotalSum />;
 export const totalSum = () => <TotalSum />;
+export const errorhandling = () => <ErrorHandling />;

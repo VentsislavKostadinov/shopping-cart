@@ -28,5 +28,10 @@
 
     "orderButton": {
         "orderButtonTitle":  "Order now" 
+    },
+
+    "errorHandling": {
+        "errorHandlingTitle": "Something went wrong",
+        "errorButtonTitle": "Refresh page"
     }
 }
