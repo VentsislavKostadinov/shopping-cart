@@ -64,6 +64,7 @@
     "@storybook/react": "^6.5.15",
     "@storybook/testing-library": "^0.0.13",
     "babel-plugin-named-exports-order": "^0.0.2",
+    "cypress": "^12.7.0",
     "gh-pages": "^4.0.0",
     "webpack": "^5.75.0"
   }
